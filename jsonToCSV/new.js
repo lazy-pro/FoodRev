@@ -7,9 +7,8 @@ if (process.argv.length < 3) {
     , filename = process.argv[2];
   fs.readFile(filename, 'utf8', function(err, data) {
     if (err) throw err;
-    //console.log(data)
-    var xy = eval('(' + data + ')');
-    var json = JSON.stringify(xy);
-    //console.log('OK: ' + filename);
+    
+    var fineop = eval('(' + data + ')');
+    var json = JSON.stringify(fineop);
     console.log(json)
   });
