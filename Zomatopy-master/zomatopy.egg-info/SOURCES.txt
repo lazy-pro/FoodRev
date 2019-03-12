@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+zomatopy.egg-info/PKG-INFO
+zomatopy.egg-info/SOURCES.txt
+zomatopy.egg-info/dependency_links.txt
+zomatopy.egg-info/requires.txt
+zomatopy.egg-info/top_level.txt
