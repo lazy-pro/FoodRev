@@ -10,6 +10,7 @@ if (process.argv.length < 3) {
     //console.log(data)
     var xy = eval('(' + data + ')');
     var json = JSON.stringify(xy);
+    var obj = JSON.parse(json)
     //console.log('OK: ' + filename);
     console.log(json)
   });

@@ -1,4 +1,4 @@
-{ results_found: 574,
+[{ results_found: 574,
   results_start: 0,
   results_shown: 20,
   restaurants:
@@ -927,7 +927,7 @@
           longitude: '81.8326148763',
           zipcode: '',
           country_id: 1,
-          locality_verbose: 'Civil Lines, Allahabad' },
+          locality_verbose: 'Civil Li//console.log(data)nes, Allahabad' },
        switch_to_order_menu: 0,
        cuisines: 'North Indian, Street Food, Fast Food',
        average_cost_for_two: 500,
@@ -1069,7 +1069,7 @@
        has_table_booking: 0,
        events_url:
         'https://www.zomato.com/allahabad/eden-by-connoisseur-civil-lines/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1',
-       establishment_types: [] } ] }
+       establishment_types: [] } ] },
 { results_found: 574,
   results_start: 20,
   results_shown: 20,
@@ -2196,7 +2196,7 @@
        has_table_booking: 0,
        events_url:
         'https://www.zomato.com/allahabad/netram-mulchand-sons-katra/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1',
-       establishment_types: [] } ] }
+       establishment_types: [] } ] },
 { results_found: 574,
   results_start: 40,
   results_shown: 20,
@@ -3272,7 +3272,7 @@
        has_table_booking: 0,
        events_url:
         'https://www.zomato.com/allahabad/shree-kanha-sweets-restaurant-george-town/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1',
-       establishment_types: [] } ] }
+       establishment_types: [] } ] },
 { results_found: 574,
   results_start: 60,
   results_shown: 20,
@@ -4356,7 +4356,7 @@
        has_table_booking: 0,
        events_url:
         'https://www.zomato.com/allahabad/u-s-pizza-katra/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1',
-       establishment_types: [] } ] }
+       establishment_types: [] } ] },
 { results_found: 574,
   results_start: 80,
   results_shown: 20,
@@ -5454,7 +5454,4 @@
        events_url:
         'https://www.zomato.com/allahabad/kanha-sweets-restaurant-katra/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1',
        establishment_types: [] } ] }
-{ results_found: 574,
-  results_start: 0,
-  results_shown: 0,
-  restaurants: [] }
+]

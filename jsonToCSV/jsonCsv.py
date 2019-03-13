@@ -17,32 +17,41 @@ def get_leaves(item, key=None):
     else:
         return [(key, item)]
 
-if sys.argv[1] is not None and sys.argv[2] is not None:
+# if sys.argv[1] is not None and sys.argv[2] is not None:
 
-    fileInput = sys.argv[1]
-    fileOutput = sys.argv[2]
-    with open(fileInput) as inputFile:  
-        x=inputFile.read()
-         #decode("utf-8") open json file
-    outputFile = open(fileOutput, 'w') #load csv file
-    print(x)
-    inputFile = json.dumps(ast.literal_eval(x))
-    print(inputFile)
-    data = json.loads(inputFile) #load json content
-    # inputFile.close() #close the input file
-    print(data)
-    output = csv.writer(outputFile) #create a csv.write
-    # output.writerow(data.keys())  # header row
-    # # #for row in data:
-    # output.writerow(data.values()) #values row
+#     fileInput = sys.argv[1]
+#     fileOutput = sys.argv[2]
+#     inputFile = open(fileInput,newline='')  #decode("utf-8") open json file
+#     outputFile = open(fileOutput, 'w', newline='') #load csv file
+#     data = json.load(inputFile) #load json content
+#     # inputFile.close() #close the input file
+#     print(data)
+#     output = csv.writer(outputFile) #create a csv.write
+#     # output.writerow(data.keys())  # header row
+#     # # #for row in data:
+#     # output.writerow(data.values()) #values row
 
+#     write_header = True
+
+#     for entry in data:
+#         leaf_entries = sorted(get_leaves(entry))
+
+#         if write_header:
+#             output.writerow([k for k, v in leaf_entries])
+#             write_header = False
+
+#         output.writerow([v for k, v in leaf_entries])
+
+with open('PrayagData.txt', newline='') as f_input, open('test.csv', 'w', newline='') as f_output:
+    csv_output = csv.writer(f_output)
     write_header = True
 
-    for entry in data:
-        leaf_entries = sorted(get_leaves(entry))
+    for itr in json.load(f_input):
+        for entry in itr['restaurants']:
+            leaf_entries =get_leaves(entry)
 
-        if write_header:
-            output.writerow([k for k, v in leaf_entries])
-            write_header = False
+            if write_header:
+                csv_output.writerow([k for k, v in leaf_entries])
+                write_header = False
 
-        output.writerow([v for k, v in leaf_entries])
+            csv_output.writerow([v for k, v in leaf_entries])
