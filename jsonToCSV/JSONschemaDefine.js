@@ -11,7 +11,7 @@ fs.readFile(filename, 'utf8', function (err, data) {
   var fineop = eval('(' + data + ')');
   var json = JSON.stringify(fineop);
   //console.log(json)
-  var propKey = ["res_id", "name", "url", "address", "city_id", "latitude", "longitude", "country_id",
+  var propKey = ["id", "name", "url", "address", "city_id", "latitude", "longitude", "country_id",
     "locality_verbose", "switch_to_order_menu", "cuisines", "average_cost_for_two", "price_range",
     "currency", "is_book_form_web_view", "aggregate_rating", "rating_text", "rating_color", "votes",
     "has_fake_reviews", "has_online_delivery", "is_table_reservation_supported", "has_table_booking"]
@@ -42,18 +42,6 @@ fs.readFile(filename, 'utf8', function (err, data) {
 });
 
 /*
-    "business_id": "tnhfDv5Il8EaGSXZGiuQGg","name": "Garaje",
-    "address": "475 3rd St","city": "San Francisco","state": "CA","postal code": "94107",
-    "latitude": 37.7817529521,"longitude": -122.39612197,"stars": 4.5,"review_count": 1198,
-    "is_open": 1,"attributes": {
-        "RestaurantsTakeOut": true,
-        "BusinessParking": {
-            "garage": false
-        },},"categories": [
-        "Mexican",
-        "Burgers",
-        "Gastropubs"],"hours"}
-
 reference for iterating over json in js
 var obj = {a: 1, b: 2};
 for (var key in obj) {
